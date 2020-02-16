@@ -1,0 +1,43 @@
+{
+  "name": "@giltayar/ah-theyre-here-esm-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/ah-theyre-here-esm-nodejs.js",
+  "engines": {
+    "node": ">=10.3.0"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "test": "npm run test:mocha && npm run eslint",
+    "test:mocha": "mocha --no-timeouts --exit 'test/unit/*.test.js' 'test/it/*.test.js'",
+    "eslint": "eslint '**/*.js'"
+  },
+  "keywords": [
+    "nodejs",
+    "esmodules",
+    "talk"
+  ],
+  "author": "Gil Tayar <gil@tayar.org>",
+  "license": "UNLICENSED",
+  "repository": {
+    "url": "https://github.com/giltayar/ah-theyre-here-esm-nodejs",
+    "type": "git"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-mocha-no-only": "^1.1.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "mocha": "^7.0.0-esm1",
+    "prettier": "^1.19.1"
+  }
+}
