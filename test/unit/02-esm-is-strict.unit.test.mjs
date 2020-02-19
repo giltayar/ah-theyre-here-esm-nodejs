@@ -12,8 +12,16 @@ describe('esm-is-strict (unit)', function() {
       'this is defined',
     ])
   })
+
   it('esm', async () => {
     expect(await executeModule('02-esm-is-strict/esm-strict.mjs')).to.eql([
+      'x not defined',
+      'this is undefined',
+    ])
+  })
+
+  it('esm with js extension', async () => {
+    expect(await executeModule('02-esm-is-strict/js-here-is-ok/esm-strict.js')).to.eql([
       'x not defined',
       'this is undefined',
     ])
