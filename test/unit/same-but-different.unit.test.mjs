@@ -5,11 +5,11 @@ import chai from 'chai'
 const {expect} = chai
 import executeModule from './execute-module.mjs'
 
-describe('same-but-different (unit)', function() {
+describe('what-are-es-modules (unit)', function() {
   it('cjs-main.js', async () => {
-    expect(await executeModule('same-but-different/cjs-main.js')).to.eql(['9', '5'])
+    expect(await executeModule('what-are-es-modules/cjs-main.js')).to.eql(['9', '5'])
   })
   it('esm-main.js', async () => {
-    expect(await executeModule('same-but-different/esm-main.mjs')).to.eql(['9', '5'])
+    expect(await executeModule('what-are-es-modules/esm-main.mjs')).to.eql(['9', '5'])
   })
 })
