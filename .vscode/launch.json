@@ -12,9 +12,9 @@
       "args": [
         "--no-timeouts",
         "--trace-warnings",
-        "'test/unit/*.test.js'",
-        "'test/it/*.test.js'",
-        "'test/e2e/*.test.js'"
+        "'test/unit/*.test.mjs'",
+        "'test/it/*.test.mjs'",
+        "'test/e2e/*.test.mjs'"
       ],
       "env": {
         "DEBUG": "applitools:${workspaceFolderBasename}*"
