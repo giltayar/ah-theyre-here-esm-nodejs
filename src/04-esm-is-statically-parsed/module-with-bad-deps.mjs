@@ -1,3 +1,3 @@
-import hello from './good-deps.mjs'
+import hello from './hello.mjs'
 
 console.log(hello)
