@@ -10,7 +10,7 @@
     "src"
   ],
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "test": "npm run test:mocha && npm run eslint",
