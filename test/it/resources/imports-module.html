@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-  <div id="root">lll</div>
-  <script type="module">
-    import {hello} from './module.mjs'
+<div id="root"></div>
+<script type="module">
+  import {hello} from './a-module.mjs'
 
-    hello(document.querySelector('#root'))
-  </script>
-</body>
-</html>
+  hello(document.getElementById('root'))
+</script>
