@@ -27,6 +27,7 @@
     "valid-typeof": "warn",
     "mocha-no-only/mocha-no-only": "error",
     "no-debugger": "error",
-    "node/exports-style": ["error", "module.exports"]
+    "node/exports-style": ["error", "module.exports"],
+    "node/no-unsupported-features/es-syntax": ["off"]
   }
 }

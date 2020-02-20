@@ -37,9 +37,17 @@ describe('esm-is-browser-compatible (unit)', function() {
     expect(consoleLogs).to.eql(['Hello, world'])
   })
 
-  it('esm', async () => {
+  it('node supports same esm code as browsers', async () => {
     expect(await executeModule('03-esm-is-browser-compatible/imports-module.mjs')).to.eql([
       'Hello, world',
+    ])
+  })
+
+  it('node supports only paths that browsers support', async () => {
+    expect(await executeModule('03-esm-is-browser-compatible/only-relative-paths.mjs')).to.eql([
+      'index.mjs and package.json "main" not supported',
+      'direct import of index.mjs',
+      'direct import of main.mjs',
     ])
   })
 })
