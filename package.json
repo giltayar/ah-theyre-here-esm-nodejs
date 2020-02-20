@@ -1,6 +1,6 @@
 {
   "name": "@giltayar/ah-theyre-here-esm-nodejs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "src/ah-theyre-here-esm-nodejs.mjs",
   "engines": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "node scripts/generate-import-maps.mjs",
-    "test": "npm run test:mocha && npm run eslint",
+    "test": "npm run eslint && npm run test:mocha",
     "test:mocha": "mocha --no-timeouts --exit 'test/unit/*.test.mjs' 'test/it/*.test.mjs'",
     "eslint": "eslint '**/*.js' '**/*.mjs'"
   },
