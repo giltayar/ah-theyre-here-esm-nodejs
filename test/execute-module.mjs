@@ -19,7 +19,7 @@ export default async function executeModule(pathToModuleInSrc) {
   ])
 
   if (code !== 0) {
-    throw new Error(stderr)
+    throw new Error(stdout + '\n' + stderr)
   } else {
     return stdout.split('\n').filter(Boolean)
   }
