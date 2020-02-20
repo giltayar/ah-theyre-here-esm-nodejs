@@ -27,12 +27,12 @@ describe('esm-is-browser-compatible (unit)', function() {
   before(async () => {
     app = fastify()
     app.register(fastifyStatic, {
-      root: path.join(__dirname, '../../'),
+      root: path.join(__dirname, '../'),
     })
     app.register(fastifyStatic, {
       decorateReply: false,
       prefix: '/dist/node_modules',
-      root: path.join(__dirname, '../../node_modules'),
+      root: path.join(__dirname, '../node_modules'),
     })
     staticBaseUrl = await app.listen()
   })
