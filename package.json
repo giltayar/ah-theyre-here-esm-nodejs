@@ -1,18 +1,20 @@
 {
   "name": "@giltayar/ah-theyre-here-esm-nodejs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "src/ah-theyre-here-esm-nodejs.mjs",
   "engines": {
     "node": ">=13.9.0"
   },
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "build": "node scripts/generate-import-maps.mjs",
     "test": "npm run test:mocha && npm run eslint",
     "test:mocha": "mocha --no-timeouts --exit 'test/unit/*.test.mjs' 'test/it/*.test.mjs'",
     "eslint": "eslint '**/*.js' '**/*.mjs'"
@@ -29,9 +31,11 @@
     "type": "git"
   },
   "dependencies": {
-    "debug": "^4.1.1"
+    "debug": "^4.1.1",
+    "mjs-example": "^1.0.2"
   },
   "devDependencies": {
+    "@jsenv/node-module-import-map": "^11.0.1",
     "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
