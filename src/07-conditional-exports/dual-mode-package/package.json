@@ -1,0 +1,13 @@
+{
+  "main": "./cjs/main.js",
+  "exports": {
+    ".": {
+      "import": "./esm/main.js",
+      "require": "./cjs/main.js"
+    },
+    "./world": {
+      "import": "./esm/world.js",
+      "require": "./cjs/world.js"
+    }
+  }
+}

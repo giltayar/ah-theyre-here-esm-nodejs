@@ -1,1 +1,3 @@
 src/05-esm-is-async/top-level-await.mjs
+src/07-conditional-exports/dual-mode-package/cjs
+src/07-conditional-exports/dual-mode-package/node_modules

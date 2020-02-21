@@ -14,7 +14,10 @@
     "access": "public"
   },
   "scripts": {
-    "build": "node scripts/generate-import-maps.mjs && cp -R src/06-exports/package-with-exports node_modules && cp -R src/06-exports/cjs-package-with-exports node_modules",
+    "build": "npm-run-all -p 'build:*'",
+    "build:03-esm-is-browser-compatible": "node scripts/generate-import-maps.mjs",
+    "build:06-exports": "cd src/06-exports && cp -R package-with-exports ../../node_modules && cp -R cjs-package-with-exports ../../node_modules",
+    "build:07-conditional-exports": "cd src/07-conditional-exports/dual-mode-package && babel esm --out-dir cjs && cp -R ../dual-mode-package ../../../node_modules",
     "test": "npm run eslint && npm run test:mocha",
     "test:mocha": "mocha --no-timeouts --exit 'test/*.test.mjs'",
     "eslint": "eslint '**/*.js' '**/*.mjs'"
@@ -35,7 +38,11 @@
   },
   "devDependencies": {
     "@jsenv/node-module-import-map": "^11.0.1",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-plugin-mocha-no-only": "^1.1.0",
@@ -45,6 +52,7 @@
     "fastify-static": "^2.6.0",
     "get-stream": "^5.1.0",
     "mocha": "7.0.0-esm1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
     "puppeteer": "^2.1.1"
   }
