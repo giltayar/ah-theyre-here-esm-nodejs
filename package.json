@@ -1,6 +1,6 @@
 {
   "name": "@giltayar/ah-theyre-here-esm-nodejs",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "",
   "main": "src/ah-theyre-here-esm-nodejs.mjs",
   "engines": {
@@ -14,10 +14,11 @@
     "access": "public"
   },
   "scripts": {
+    "postinstall": "cd src/07-conditional-exports/dual-mode-package && npm install",
     "build": "npm-run-all -p 'build:*'",
     "build:03-esm-is-browser-compatible": "node scripts/generate-import-maps.mjs",
     "build:06-exports": "cd src/06-exports && cp -R package-with-exports ../../node_modules && cp -R cjs-package-with-exports ../../node_modules",
-    "build:07-conditional-exports": "cd src/07-conditional-exports/dual-mode-package && babel esm --out-dir cjs && cp -R ../dual-mode-package ../../../node_modules",
+    "build:07-conditional-exports": "cd src/07-conditional-exports/dual-mode-package && npm run build && cp -R ../dual-mode-package ../../../node_modules",
     "test": "npm run eslint && npm run test:mocha",
     "test:mocha": "mocha --no-timeouts --exit 'test/*.test.mjs'",
     "eslint": "eslint '**/*.js' '**/*.mjs'"
@@ -38,11 +39,7 @@
   },
   "devDependencies": {
     "@jsenv/node-module-import-map": "^11.0.1",
-    "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.3",
-    "babel-plugin-dynamic-import-node": "^2.3.0",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-plugin-mocha-no-only": "^1.1.0",

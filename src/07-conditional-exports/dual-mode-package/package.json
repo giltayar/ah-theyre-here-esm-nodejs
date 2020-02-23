@@ -9,5 +9,14 @@
       "import": "./esm/world.js",
       "require": "./cjs/world.js"
     }
+  },
+  "scripts": {
+    "build": "babel esm --out-dir cjs"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
   }
 }
