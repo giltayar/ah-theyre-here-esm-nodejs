@@ -38,7 +38,7 @@ The [`src`](./src) directory contains all the code samples found in the talk:
   This sample is not comprehensive by any moeans
 * `02-strict`: code that shows that ES modules are strict by definition, while CommonJS is not.
 * `03-esm-is-browser-compatible`: code that shows that the same ES module code can be used both in the browser
-  and in Node.js.
+  and in Node.js, including the use of "import maps".
 * `04-esm-is-statically-parsed` code that shows that ES module problems are caught statically before execution
   of said code.
 * `05-esm-is-async`: code that shows sample "top-level await" code. This code does
