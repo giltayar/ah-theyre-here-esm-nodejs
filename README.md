@@ -1,7 +1,10 @@
 # ah-theyre-here-esm-nodejs
 
+![Node.js CI](https://github.com/giltayar/ah-theyre-here-esm-nodejs/workflows/Node.js%20CI/badge.svg)
+
 Code accompanying my talk "Aaaaaaaaaaaaaah, They’re Here! ES Modules in Node.JS",
 whose slides can be found [here](http://bit.ly/ah-theyre-here-esm-nodejs-nodetlv)
+
 
 ## Installing
 
