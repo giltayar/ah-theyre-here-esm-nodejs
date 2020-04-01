@@ -1,6 +1,7 @@
 {
   "main": "./main.mjs",
   "exports": {
+    ".": "./main.mjs",
     "./world": "./world.mjs"
   }
 }

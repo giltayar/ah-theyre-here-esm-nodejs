@@ -16,12 +16,12 @@ describe('exports (unit)', function() {
   it('cannot import a not-declated subpath in an ESM module with exports', async () => {
     expect(
       await executeModule('06-exports/try-override-exports.mjs').catch(err => err.message),
-    ).to.include("not define a './prefix.mjs' subpath")
+    ).to.include('Package subpath \'./prefix.mjs\' is not defined by "exports"')
   })
 
   it('cannot import a not-declated subpath in a CJS module with exports', async () => {
     expect(
       await executeModule('06-exports/try-override-exports.js').catch(err => err.message),
-    ).to.include("not define a './prefix.js' subpath")
+    ).to.include('Package subpath \'./prefix.js\' is not defined by "exports"')
   })
 })

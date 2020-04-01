@@ -1,6 +1,7 @@
 {
   "main": "./main.js",
   "exports": {
+    ".": "./main.js",
     "./world": "./world.js"
   }
 }
