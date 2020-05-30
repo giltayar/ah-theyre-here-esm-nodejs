@@ -12,7 +12,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 import executeModule from './execute-module.mjs'
 
-describe('esm-is-browser-compatible (unit)', function() {
+describe('esm-is-browser-compatible (unit)', function () {
   /** @type puppeteer.Browser */ let browser
   before(
     async () =>
@@ -41,7 +41,7 @@ describe('esm-is-browser-compatible (unit)', function() {
   it('browsers support esm', async () => {
     const page = await browser.newPage()
     let consoleLogs = []
-    page.on('console', msg => consoleLogs.push(msg.text()))
+    page.on('console', (msg) => consoleLogs.push(msg.text()))
     await page.goto(
       new URL(
         `${staticBaseUrl}/src/03-esm-is-browser-compatible/imports-module.html`,
@@ -55,7 +55,7 @@ describe('esm-is-browser-compatible (unit)', function() {
   it('browsers support bare-specifiers with importmap', async () => {
     const page = await browser.newPage()
     let consoleLogs = []
-    page.on('console', msg => consoleLogs.push(msg.text()))
+    page.on('console', (msg) => consoleLogs.push(msg.text()))
     await page.goto(new URL(`${staticBaseUrl}/dist/import-maps.html`, import.meta.url))
 
     expect(consoleLogs).to.eql([(await import('mjs-example')).hello])

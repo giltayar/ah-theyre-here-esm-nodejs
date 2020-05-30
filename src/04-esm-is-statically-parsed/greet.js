@@ -1,3 +1,3 @@
-module.exports.greetings = function(someone) {
+module.exports.greetings = function (someone) {
   return `Hello, ${someone}`
 }

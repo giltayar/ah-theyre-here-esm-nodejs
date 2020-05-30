@@ -1,3 +1,3 @@
-module.exports.world = function() {
+module.exports.world = function () {
   return 'world'
 }

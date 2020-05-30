@@ -1,3 +1,3 @@
-module.exports.greet = function(who) {
+module.exports.greet = function (who) {
   return `Hello, ${who}`
 }

@@ -4,7 +4,7 @@ import chai from 'chai'
 const {expect} = chai
 import executeModule from './execute-module.mjs'
 
-describe('esm-is-strict (unit)', function() {
+describe('esm-is-strict (unit)', function () {
   it('cjs', async () => {
     expect(await executeModule('02-esm-is-strict/cjs-not-strict.js')).to.eql([
       'x is global',

@@ -4,7 +4,7 @@ import chai from 'chai'
 const {expect} = chai
 import executeModule from './execute-module.mjs'
 
-describe('migration (unit)', function() {
+describe('migration (unit)', function () {
   it('original CJS module works', async () => {
     expect(await executeModule('08-migration/original/main.js')).to.eql(['Hello, world'])
   })

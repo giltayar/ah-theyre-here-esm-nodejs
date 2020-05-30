@@ -18,7 +18,7 @@ async function main() {
   await fs.writeFile('./dist/import-maps.html', importMapsHtmlWithImportMap)
 }
 
-main().catch(err => {
+main().catch((err) => {
   console.error(err.toString())
 
   process.exit(1)
